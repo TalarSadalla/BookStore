@@ -1,6 +1,7 @@
 package pl.jstk.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -63,6 +64,7 @@ public class BookController {
 		return modelAndView;
 	}
 
+	@Secured("ROLE_ADMIN")
 	@RequestMapping(value = "/books/delete{id}", method = RequestMethod.GET)
 	public ModelAndView deleteBook(@RequestParam long id) {
 		ModelAndView modelAndView = new ModelAndView("delete");

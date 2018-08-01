@@ -33,7 +33,7 @@
                             </a>
                         </p>
                          <p>
-                            <a sec:authorize="hasRole('ADMIN')" th:href="@{'/books/delete?id='+${book.id}}"
+                            <a th:href="@{'/books/delete?id='+${book.id}}"
                                class="btn btn-danger"> <span
                                     class="glyphicon-info-sign glyphicon"/></span> Delete
                             </a>

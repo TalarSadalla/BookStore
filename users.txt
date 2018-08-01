@@ -1,0 +1,5 @@
+admin/admin
+user/user
+talar/password
+marcin/marcin
+adam/password0!

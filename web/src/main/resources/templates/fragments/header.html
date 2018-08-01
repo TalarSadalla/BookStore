@@ -19,16 +19,17 @@
                         <a th:href="@{/books}">Books</a>
                     </li>
                 </ul>
-                <ul class="nav navbar-nav navbar-right">
-                 <li  style="display: inline-block;">
-                <div sec:authentication=”name”></div>
-                </li>
-                    <li  style="display: inline-block;">
-                     <a sec:authorize="hasRole('USER')" th:href="@{/logout}"><span
+                <ul class="nav navbar-nav navbar-right">                  
+                     <li  style="display: inline-block;">
+               			<span class="glyphicon glyphicon-user" style="color:white;font-weight:bold; font-size: 15px"><div sec:authentication="name"></div></span> 
+               		 </li>
+               		 <li  style="display: inline-block;">
+                     <a sec:authorize="isAuthenticated()" th:href="@{/logout}"><span
                         	class="glyphicon glyphicon-log-out" ></span> Log out</a>
                     </li>
-                    <li  style="display: inline-block;"><a th:href="@{/login}"><span
-                            class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                    <li  style="display: inline-block;"><a sec:authorize="isAnonymous()" th:href="@{/login}"><span
+                            class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
                 </ul>
             </div>            
         </div>
