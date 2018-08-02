@@ -87,16 +87,14 @@ public class BookServiceImpl implements BookService {
 	}
 
 	@Override
-	public List<BookTo> findByFilteredParameters(BookTo bookTo) {
+	public List<BookTo> findByFilteredParameters(String title, String authors) {
 		List<BookTo> bookToList = new ArrayList<>();
-		String title = bookTo.getTitle();
-		String author = bookTo.getAuthors();
-		if (title != null && author != null) {
-			bookToList = findBookByTitleAndAuthor(title, author);
-		} else if (title != null && author == null) {
+		if (!title.equals("") && !authors.equals("")) {
+			bookToList = findBookByTitleAndAuthor(title, authors);
+		} else if (!title.equals("") && authors.equals("")) {
 			bookToList = findBooksByTitle(title);
-		} else if (title == null && author != null) {
-			bookToList = findBooksByAuthor(author);
+		} else if (title.equals("") && !authors.equals("")) {
+			bookToList = findBooksByAuthor(authors);
 		}
 		return bookToList;
 	}

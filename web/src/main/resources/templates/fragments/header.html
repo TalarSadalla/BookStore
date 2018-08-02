@@ -21,7 +21,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">                  
                      <li  style="display: inline-block;">
-               			<span class="glyphicon glyphicon-user" style="color:white;font-weight:bold; font-size: 15px"><div sec:authentication="name"></div></span> 
+               			<span sec:authorize="isAuthenticated()" class="glyphicon glyphicon-user" style="color:white;font-weight:bold; font-size: 15px"><div sec:authentication="name"></div></span> 
                		 </li>
                		 <li  style="display: inline-block;">
                      <a sec:authorize="isAuthenticated()" th:href="@{/logout}"><span

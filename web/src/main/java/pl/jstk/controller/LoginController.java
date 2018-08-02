@@ -2,16 +2,16 @@ package pl.jstk.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.servlet.ModelAndView;
 
 import pl.jstk.service.UserService;
 import pl.jstk.to.UserTo;
 
-@RestController
+@Controller
 public class LoginController {
 
 	@Autowired
@@ -31,6 +31,5 @@ public class LoginController {
 		ModelAndView modelAndView = new ModelAndView("welcome");
 		modelAndView.setViewName("redirect:/");
 		return modelAndView;
-
 	}
 }

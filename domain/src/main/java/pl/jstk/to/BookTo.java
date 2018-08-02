@@ -3,44 +3,44 @@ package pl.jstk.to;
 import pl.jstk.enumerations.BookStatus;
 
 public class BookTo {
-    private Long id;
-    private String title;
-    private String authors;
-    private BookStatus status;
-    
-    public BookTo() {
-    }
+	private Long id;
+	private String title;
+	private String authors;
+	private BookStatus status;
 
-    public BookTo(Long id, String title, String authors, BookStatus status) {
-        this.id = id;
-        this.title = title;
-        this.authors = authors;
-        this.setStatus(status);
-    }
+	public BookTo() {
+	}
 
-    public Long getId() {
-        return id;
-    }
+	public BookTo(Long id, String title, String authors, BookStatus status) {
+		this.id = id;
+		this.title = title;
+		this.authors = authors;
+		this.setStatus(status);
+	}
 
-    public void setId(Long id) {
-        this.id = id;
-    }
+	public Long getId() {
+		return id;
+	}
 
-    public String getTitle() {
-        return title;
-    }
+	public void setId(Long id) {
+		this.id = id;
+	}
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+	public String getTitle() {
+		return title;
+	}
 
-    public String getAuthors() {
-        return authors;
-    }
+	public void setTitle(String title) {
+		this.title = title;
+	}
 
-    public void setAuthors(String authors) {
-        this.authors = authors;
-    }
+	public String getAuthors() {
+		return authors;
+	}
+
+	public void setAuthors(String authors) {
+		this.authors = authors;
+	}
 
 	public BookStatus getStatus() {
 		return status;
@@ -49,4 +49,10 @@ public class BookTo {
 	public void setStatus(BookStatus status) {
 		this.status = status;
 	}
+
+	@Override
+	public String toString() {
+		return "BookTo [id=" + id + ", title=" + title + ", authors=" + authors + ", status=" + status + "]";
+	}
+
 }

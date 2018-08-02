@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+      layout:decorate="~{fragments/layout}">
+<head>
+    <title>Book does not exist</title>
+</head>
+<body>
+<div layout:fragment="content" th:remove="tag">
+<section>
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Book not found !</h1>
+        </div>
+    </div>
+</section>
+<section class="container">
+    <div class="row">
+        <div class="col-md-5">            
+                <a th:href="@{'/books'}" class="btn btn-default">
+                    <span class="glyphicon-hand-left glyphicon"></span> back
+                </a>
+
+            </p>
+
+        </div>
+    </div>
+</section>
+</div>
+</body>
+</html>

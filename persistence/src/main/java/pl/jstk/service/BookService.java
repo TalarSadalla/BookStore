@@ -24,7 +24,7 @@ public interface BookService {
 
 	List<BookTo> findBookByTitleAndAuthorAndStatu(String title, String author, String status);
 
-	List<BookTo> findByFilteredParameters(BookTo bookTo);
+	List<BookTo> findByFilteredParameters(String title, String authors);
 
 	BookTo saveBook(BookTo book);
 

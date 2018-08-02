@@ -24,6 +24,7 @@ public class MyErrorController implements ErrorController {
 			modelAndView.addObject("error", "Sorry this page does not exist!");
 			return modelAndView;
 		}
+
 		modelAndView.addObject("error", Integer.valueOf(statusCode.toString()));
 		return modelAndView;
 	}
